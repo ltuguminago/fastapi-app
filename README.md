@@ -67,6 +67,19 @@ docker tag hello-multistage:latest ltuguminago/fastapi-app:v1
 
 <img width="812" height="176" alt="Tager imagen" src="https://github.com/user-attachments/assets/e0156856-66c7-4d47-8304-3d0b9b8264de" />
 
+### PASO 7: Subir imagen al DockerHub
+
+```bash
+docker push ltuguminago/fastapi-app:v1
+```
+
+**Salida Esperada**
+
+<img width="786" height="231" alt="subir imagen al dockerHub" src="https://github.com/user-attachments/assets/f133972b-e90d-42d7-94b5-0585c47829d4" />
+
+### PASO 8: Revizar la imagen subida en el repositorio de DockerHub
+
+<img width="924" height="681" alt="revisamos imagen subida en el dockerhub" src="https://github.com/user-attachments/assets/8ba65d1e-c85d-47f0-a5b7-266be99fd76f" />
 
 
 
