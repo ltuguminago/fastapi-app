@@ -11,13 +11,6 @@
 
 Con base en el laboratorio de fastapi-app, deberan subir la imagen que le corresponde a su grupo y las aplicaciones a su repositorio de github. Construir la imagen, subir a docker hub y realizar el análisis de vulnerabilidades con docker scout mediante un flujo de github actions.
 
-## 1.1. Arquitectura del Sistema
-
-- **MySQL 8.3**: Base de datos para almacenar información de propietarios y vehículos
-- **PhpMyAdmin 5.2.2**: Interfaz web para administración de la base de datos
-- **Docker Network**: Red personalizada para comunicación entre contenedores
-- **Volúmenes**: Gestionados por Docker y almacenados en /var/lib/docker/volumes/.
-
 # 2. Configuración e Instalación
 
 ### PASO 1: 📂 Estructura de Archivos
@@ -30,16 +23,26 @@ Con base en el laboratorio de fastapi-app, deberan subir la imagen que le corres
     |____ despliegues.txt
     |____ init.sql
 ```
-### PASO 2: Creación de Red Docker
+### PASO 2: Iniciar sessión en DockerHub y crear repositorio
 
----
+<img width="946" height="553" alt="Crear repositorio DockerHub" src="https://github.com/user-attachments/assets/38ceed27-051c-4595-9506-e0a57ea78ddf" />
+
+### PASO 3: En la termina, iniciar sessión con las credenciales de DockerHub
+
+<img width="740" height="178" alt="Iniciar session en terminal DockerHub" src="https://github.com/user-attachments/assets/ae2b8967-a48c-4e87-ba05-63ef1d185a2d" />
+
+### PASO 4: Construir imagen de Docker MultiStage
 
 ```bash
-docker network create --driver bridge netw-vehiculos
-docker network ls
+docker build 't hello-multistage 'f DockerFile-multistage
 ```
 
 **Salida Esperada**
+
+<img width="1236" height="475" alt="Construccion imagen multi-stage" src="https://github.com/user-attachments/assets/0ccd88dc-5adc-4e90-a61d-82aff8a19829" />
+
+
+
 
 <img width="886" height="213" alt="image" src="https://github.com/user-attachments/assets/08eda610-37bd-415f-aed4-d355f445a46b" />
 
