@@ -144,6 +144,10 @@ push: true
 
 <img width="664" height="183" alt="Captura de pantalla de 2025-09-21 14-32-17" src="https://github.com/user-attachments/assets/8297cf96-6ce2-44e4-b294-4dcbb2b1e556" />
 
+## PASO 18. Revisar en DockerHub, la imagen subida.
+
+<img width="962" height="744" alt="Captura de pantalla de 2025-09-21 14-46-32" src="https://github.com/user-attachments/assets/7724459b-02aa-4bd7-a5fa-25c56670a7b4" />
+
 
 # 3. Conclusiones
 
