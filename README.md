@@ -40,7 +40,7 @@ docker login -u ltuguminago
 ### PASO 4: Construir imagen de Docker MultiStage
 
 ```bash
-docker build -t hello-multistage -f DockerFile-multistage
+docker build -t hello-multistage -f Dockerfile-multistage
 ```
 
 **Salida Esperada**
@@ -57,7 +57,7 @@ docker images
 
 <img width="547" height="58" alt="images" src="https://github.com/user-attachments/assets/d277c838-60b0-40a9-8d57-48fa83a9fe12" />
 
-### PASO 6: Tagear la imagen "usuario_DcokerHub/repositorio"
+### PASO 6: Tagear la imagen "usuario_DockerHub/repositorio"
 
 ```bash
 docker tag hello-multistage:latest ltuguminago/fastapi-app:v1
