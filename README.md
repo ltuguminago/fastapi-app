@@ -29,41 +29,49 @@ Con base en el laboratorio de fastapi-app, deberan subir la imagen que le corres
 
 ### PASO 3: En la termina, iniciar sessión con las credenciales de DockerHub
 
+```bash
+docker login -u ltuguminago
+```
+
+**Salida Esperada**
+
 <img width="740" height="178" alt="Iniciar session en terminal DockerHub" src="https://github.com/user-attachments/assets/ae2b8967-a48c-4e87-ba05-63ef1d185a2d" />
 
 ### PASO 4: Construir imagen de Docker MultiStage
 
 ```bash
-docker build 't hello-multistage 'f DockerFile-multistage
+docker build -t hello-multistage -f DockerFile-multistage
 ```
 
 **Salida Esperada**
 
 <img width="1236" height="475" alt="Construccion imagen multi-stage" src="https://github.com/user-attachments/assets/0ccd88dc-5adc-4e90-a61d-82aff8a19829" />
 
-
-
-
-<img width="886" height="213" alt="image" src="https://github.com/user-attachments/assets/08eda610-37bd-415f-aed4-d355f445a46b" />
-
-**Explicación:**
-
-- Crea una red personalizada tipo `bridge` llamada `netw-vehiculos`
-- Permite comunicación entre contenedores por nombre
-- Aislamiento de red del resto del sistema
-    
-### PASO 3: Despliegue del Contenedor Docker MySQL
+### PASO 5: Revisamos la imagen construida
 
 ```bash
-docker run -d \
---name db-mysql-vehiculos \
---network netw-vehiculos \
---env-file .env \
--v mysql_data:/var/lib/mysql \
--v "$PWD"/init.sql:/docker-entrypoint-initdb.d/init.sql \
--p 3306:3306 \
-mysql:8.3
+docker images
 ```
+
+**Salida Esperada**
+
+<img width="547" height="58" alt="images" src="https://github.com/user-attachments/assets/d277c838-60b0-40a9-8d57-48fa83a9fe12" />
+
+### PASO 6: Tagear la imagen "usuario_DcokerHub/repositorio"
+
+```bash
+docker tag hello-multistage:latest ltuguminago/fastapi-app:v1
+```
+
+**Salida Esperada**
+
+<img width="812" height="176" alt="Tager imagen" src="https://github.com/user-attachments/assets/e0156856-66c7-4d47-8304-3d0b9b8264de" />
+
+
+
+
+
+
 ### Paso 3.1. Salida Esperada
 
 <img width="725" height="443" alt="contenedor mysql" src="https://github.com/user-attachments/assets/407ce7d7-1577-4a08-a9e2-992a3385b065" />
