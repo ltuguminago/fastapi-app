@@ -126,11 +126,24 @@ push: true
 
 <img width="893" height="1070" alt="workflows" src="https://github.com/user-attachments/assets/b983d468-f1e5-4488-b8ed-f765a9a69fe8" />
 
-### PASO 14: Ingresar al siguiente directorio
+### PASO 14: Ingresar al siguiente directorio "Action", para ver ejecutandose el workflows.
 
-- Action
 
-****
+<img width="1221" height="488" alt="Captura de pantalla de 2025-09-21 14-29-17" src="https://github.com/user-attachments/assets/52cade66-e26a-4a23-9afe-0157a406a816" />
+
+
+### PASO 15: Ingresar al build-and-analyze
+
+<img width="1214" height="1210" alt="Captura de pantalla de 2025-09-21 14-30-30" src="https://github.com/user-attachments/assets/364820c2-fdb8-419f-9639-fa7b52d2cf1e" />
+
+### PASO 16: Terminada la ejecución workflows, finalmente se puede revisar el reporte docker-scout-report, descargando el archivo.
+
+<img width="878" height="1159" alt="Captura de pantalla de 2025-09-21 14-31-30" src="https://github.com/user-attachments/assets/b5836229-d717-4ec9-8ada-08c921f327ee" />
+
+## PASO 17. Visualizar el reporte
+
+<img width="664" height="183" alt="Captura de pantalla de 2025-09-21 14-32-17" src="https://github.com/user-attachments/assets/8297cf96-6ce2-44e4-b294-4dcbb2b1e556" />
+
 
 # 3. Conclusiones
 
