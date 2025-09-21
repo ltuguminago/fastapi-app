@@ -15,14 +15,9 @@ Con base en el laboratorio de fastapi-app, deberan subir la imagen que le corres
 
 ### PASO 1: 📂 Estructura de Archivos
 
-```bash
-    Proyecto Vehículos
-    |
-    |____ .env
-    |____ README.md
-    |____ despliegues.txt
-    |____ init.sql
-```
+<img width="222" height="185" alt="structura fastapi" src="https://github.com/user-attachments/assets/9e959e1b-bfc3-4a77-b489-b578ade1ac24" />
+
+
 ### PASO 2: Iniciar sessión en DockerHub y crear repositorio
 
 <img width="946" height="553" alt="Crear repositorio DockerHub" src="https://github.com/user-attachments/assets/38ceed27-051c-4595-9506-e0a57ea78ddf" />
@@ -112,66 +107,42 @@ DOCKERHUB_TOKEN
 
 <img width="1170" height="558" alt="Docker images configure" src="https://github.com/user-attachments/assets/5517d68b-5aae-416e-ac3e-4457281e8391" />
 
-### PASO 13: Ingresar al siguiente directorio
 
+### PASO 13: Reemplazar el contenido del workflows actual por el contenido del archivo fastapi.ylm
 
-
-### Configuración Adicional
-
-
-
-**Archivo .env**
-
-```env
-MYSQL_ROOT_PASSWORD=admin123
-MYSQL_DATABASE=dbVehiculos
-MYSQL_USER=usuario
-MYSQL_PASSWORD=clave123
-```
-
-### Comandos Útiles
+- Modificar el parametro IMAGE_NAME con el usuario del DockerHub + el nombre del repositorio.
 
 ```bash
-# Ver contenedores en ejecución
-docker ps
-
-# Ver logs de un contenedor
-docker logs db-mysql-vehiculos
-
-# Conectar a MySQL directamente
-docker exec -it db-mysql-vehiculos mysql -u root -p
-
-# Detener todos los contenedores
-docker stop db-mysql-vehiculos web_phpmyadmin_vehiculos
-
-# Eliminar contenedores
-docker rm db-mysql-vehiculos web_phpmyadmin_vehiculos
-
-# Eliminar red
-docker network rm netw-vehiculos
+IMAGE_NAME: ltuguminago/fastapi-app
 ```
 
+- Modificar el parametro push con el valor de true, para que la imagen suba al DockerHub
+
+```bash
+push: true
+```
+
+- Guardar el archivo con el nombre "fastapi.ylm
+
+<img width="893" height="1070" alt="workflows" src="https://github.com/user-attachments/assets/b983d468-f1e5-4488-b8ed-f765a9a69fe8" />
+
+### PASO 14: Ingresar al siguiente directorio
+
+- Action
+
+****
 
 # 3. Conclusiones
 
 **Logros Alcanzados**
 
-- Implementación Exitosa: Se logró configurar un sistema distribuido utilizando Docker, separando la base de datos (MySQL) de la interfaz de administración (phpMyAdmin) en contenedores independientes.
-- Gestión Eficiente de Redes: La creación de la red personalizada netw-vehiculos, permitió la comunicación segura entre contenedores, eliminando la necesidad de exponer servicios innecesarios al host.
-- Persistencia de Datos Garantizada: El uso de volúmenes Docker (mysql_data), asegura que la información de propietarios y vehículos se mantenga intacta entre reinicios del sistema.
-- Automatización de Inicialización: El script init.sql, automatiza la creación de tablas y datos de prueba, reduciendo errores manuales y garantizando consistencia en diferentes entornos.
-- Separación de Configuración: El archivo .env, centraliza las variables sensibles, mejorando la seguridad y facilitando el despliegue en diferentes ambientes.
+- 
 
 **Beneficios Obtenidos**
 
-- Portabilidad: El sistema puede ejecutarse en cualquier máquina con Docker instalado
-- Escalabilidad: Fácil agregar nuevos servicios o réplicas de contenedores
-- Mantenibilidad: Cada servicio se actualiza independientemente
-- Aislamiento: Los fallos en un contenedor no afectan a otros servicios
-- Reproducibilidad: El entorno se puede recrear exactamente en cualquier momento
+- 
 
 
 # 4. Recomendaciones.
 
- - Es necesario crear primero la red Docker y luego el contenedor, ya que este inconveniente se presento al momento de ejecutar la tarea. 
- - Se debe validar que la versión de MySQL sea compatible con phpMyAdmin, ya que una incompatibilidad entre ambas versiones podría causar errores al intentar levantar el contenedor.
+ - 
