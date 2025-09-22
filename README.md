@@ -122,7 +122,7 @@ IMAGE_NAME: ltuguminago/fastapi-app
 push: true
 ```
 
-- Guardar el archivo con el nombre "fastapi.ylm
+- Guardar el archivo con el nombre "scout.ylm
 
 <img width="893" height="1070" alt="workflows" src="https://github.com/user-attachments/assets/b983d468-f1e5-4488-b8ed-f765a9a69fe8" />
 
