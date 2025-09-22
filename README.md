@@ -35,7 +35,7 @@ docker login -u ltuguminago
 ### PASO 4: Construir imagen de Docker MultiStage
 
 ```bash
-docker build -t hello-multistage -f Dockerfile-multistage
+docker build -t hello-multistage -f Dockerfile .
 ```
 
 **Salida Esperada**
